@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="blog-container">
+    <h1 class="blog-title">POSTS</h1>
+    
+    <div class="posts-list">
+        {% for post in posts %}
+        <article class="post-card">
+            <header class="post-header">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <time class="post-date" datetime="{{ post.date|date:'Y-m-d' }}">{{ post.date|date:"d F Y" }}</time>
+            </header>
+            
+            <div class="post-content">
+                <p>{{ post.message }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

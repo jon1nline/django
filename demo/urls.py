@@ -23,5 +23,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("myapp.urls")),
     path("users/", include("users.urls")),
+    path("blog/", include("blog.urls")),
 
 ]

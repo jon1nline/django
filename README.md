@@ -16,9 +16,11 @@ Sending the local files to github.
     -Created the database for the posts
     -/blog page already shows the blog posts
 
-3rd commit - page /newpost created
-    -new posts are registered on DB
-    -after registering new post it redirects to main page with all posts.
+3rd commit - newpost page added.
+
+    -page /newpost created - new posts are registered on the DB
+    -after registering new posts it redirects to the main page with all posts.
+
 
 
 

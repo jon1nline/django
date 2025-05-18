@@ -10,4 +10,6 @@ class Blog(models.Model):
     on_delete=models.CASCADE
 )
 
+    
+
 # Create your models here.

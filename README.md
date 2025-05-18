@@ -17,10 +17,13 @@ Blog app created.
     -Created the database for the posts
     -/blog page already shows the blog posts
 
+3rd commit - page /newpost created
+    -new posts are registered on DB
+    -after registering new post it redirects to main page with all posts.
 
 
 
-2nd commit - blog app created, and also new database for the blog app
+
 
     
 

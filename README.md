@@ -22,6 +22,13 @@ Sending the local files to github.
     -after registering new posts it redirects to the main page with all posts.
 
 
+4th commit - work in progress - delete posts
+
+    -new field added to Blog table: active
+    -new button "delete" added to blog posts pages.
+    -new filter to show only active posts.
+
+
 
 
 

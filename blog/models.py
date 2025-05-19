@@ -8,8 +8,9 @@ class Blog(models.Model):
     idEscritor = models.ForeignKey(
     'users.CustomUser',  # AppName.ModelName
     on_delete=models.CASCADE
+    
 )
-
+    active = models.BooleanField(default=True)
     
 
 # Create your models here.

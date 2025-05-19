@@ -4,7 +4,7 @@ from users.models import CustomUser
 import datetime
 
 def blogpage(request):
-    posted = Blog.objects.all()
+    posted = Blog.objects.filter(active=True)
     return render(request, "blogpage.html",{"posts":posted})
 # Create your views here.
 def home(request):
@@ -16,6 +16,9 @@ def newpost(request):
         content = request.POST.get('content')
         datepost = datetime.date.today()
         user = CustomUser.objects.get(id=1)
-        Blog.objects.create(title=title, message=content, date=datepost, idEscritor=user)  # Salva no banco de dados
-        return redirect('blogpage')  # Redireciona após criar
+        Blog.objects.create(title=title, message=content, date=datepost, idEscritor=user)  # save new posts to database
+        return redirect('blogpage')  # Redirect to the main page
     return render(request, "createpost.html")
+
+def deletepost(request):
+    return redirect(blogpage)

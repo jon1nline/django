@@ -15,6 +15,15 @@
             <div class="post-content">
                 <p>{{ post.message }}</p>
             </div>
+            <div class="post-author">
+                <p>Author: {{ post.idEscritor }}</p>
+            </div>
+            <div class="post-actions">
+                <form action="{% url 'deletepost' post.id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit" onclick="return confirm('Tem certeza que deseja excluir este post?')">Delete</button>
+                </form>
+            </div>
         </article>
         {% endfor %}
     </div>
